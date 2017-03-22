@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import { MaterialModule } from "@angular/material";
 import { FlexLayoutModule } from "@angular/flex-layout";
 
+import { AppSettings } from "./app.settings";
 import { AppComponent } from './app.component';
 import { SharedComponent } from './component/shared/shared.component';
 
