@@ -7,7 +7,7 @@ import { MaterialModule } from "@angular/material";
 import { FlexLayoutModule } from "@angular/flex-layout";
 
 import { AppSettings } from "./app.settings";
-import { Auth } from "./service";
+import { AuthGuard, AuthToken } from "./service";
 import { ROUTES } from "./app.routes";
 import { AppComponent } from './app.component';
 import { SharedComponent } from './component/shared';
@@ -35,7 +35,8 @@ import { PageComponent } from './component/page';
     
   ],
   providers: [
-    Auth
+    AuthGuard,
+    AuthToken
   ],
   bootstrap: [AppComponent]
 })

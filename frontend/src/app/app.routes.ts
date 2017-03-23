@@ -2,7 +2,7 @@ import { Routes } from "@angular/router";
 import { NoteComponent } from "./component/note";
 import { LoginComponent } from "./component/login";
 import { PageComponent } from "./component/page";
-import { Auth } from "./service";
+import { AuthGuard } from "./service";
 
 export const ROUTES: Routes = [
     {
@@ -17,7 +17,7 @@ export const ROUTES: Routes = [
     {
         path: "",
         component: PageComponent,
-        canActivate: [Auth],
+        canActivate: [AuthGuard],
         children: [
             {
                 path: "note",

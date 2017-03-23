@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { AuthToken } from "../../service";
 @Component({
   selector: 'app-page',
   templateUrl: './page.component.html',
@@ -7,8 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private authToken: AuthToken) { }
 
+  logout() {
+    this.authToken.logout();
+  }
   ngOnInit() {
   }
 
