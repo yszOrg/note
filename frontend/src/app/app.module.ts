@@ -7,16 +7,23 @@ import { MaterialModule } from "@angular/material";
 import { FlexLayoutModule } from "@angular/flex-layout";
 
 import { AppSettings } from "./app.settings";
+import { Auth } from "./service";
 import { ROUTES } from "./app.routes";
 import { AppComponent } from './app.component';
 import { SharedComponent } from './component/shared';
 import { LoginComponent } from './component/login';
+import { NoteComponent } from './component/note';
+import { PageComponent } from './component/page';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     SharedComponent,
-    LoginComponent
+    LoginComponent,
+    NoteComponent,
+    PageComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +34,9 @@ import { LoginComponent } from './component/login';
     RouterModule.forRoot(ROUTES)
     
   ],
-  providers: [],
+  providers: [
+    Auth
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
