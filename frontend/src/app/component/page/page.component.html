@@ -1,5 +1,6 @@
-<p>
-  page works!
-  <button md-button (click)="logout()">logout()</button>
-</p>
-<router-outlet></router-outlet>
+<page-top></page-top>
+<div fxLayoutWrap class="page-container">  
+  <div fxFlex="36px" class="page-sider">menu</div>
+  <div fxFlex="220px" class="page-list">list</div>
+  <div fxFlex="1"><router-outlet> </router-outlet></div>
+</div>

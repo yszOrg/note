@@ -1,1 +1,115 @@
-/* You can add global styles to this file, and also import other style files */
+html,body{
+    background: #f0f3f4;
+    height: 100%;
+    width: 100%;
+}
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background: #000;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden
+}
+
+#preloader>div,.widgets {
+    -webkit-backface-visibility: hidden
+}
+
+#preloader>div {
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #e85656;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    backface-visibility: hidden;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite
+}
+
+#preloader>div:after,#preloader>div:before {
+    content: "";
+    position: absolute
+}
+
+#preloader>div:before {
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #209e91;
+    -webkit-animation: spin 3s linear infinite;
+    animation: spin 3s linear infinite
+}
+
+#preloader>div:after {
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #dfb81c;
+    -webkit-animation: spin 1.5s linear infinite;
+    animation: spin 1.5s linear infinite
+}
+
+.page-top {
+    background-color: #1C2B36;
+    position: fixed;
+    z-index: 904;
+    box-shadow: 2px 0 3px rgba(0,0,0,.5);
+    height: 36px;
+    width: 100%;
+    min-width: 320px;
+    padding: 0 32px 0 40px;
+}
+
+.page-container {
+    height: 100%;
+    padding-top:36px;
+    box-sizing: border-box;
+}
+.page-sider {
+    background: #1C2B36;
+}
+.page-list {
+    border-right: 1px solid #ddd;
+    box-sizing: border-box;    
+}

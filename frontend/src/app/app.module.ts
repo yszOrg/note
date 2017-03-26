@@ -10,7 +10,9 @@ import { AppSettings } from "./app.settings";
 import { AuthGuard, AuthToken } from "./service";
 import { ROUTES } from "./app.routes";
 import { AppComponent } from './app.component';
-import { SharedComponent } from './component/shared';
+import { SharedComponent, 
+         PageTopComponent 
+       } from './component/shared';
 import { LoginComponent } from './component/login';
 import { NoteComponent } from './component/note';
 import { PageComponent } from './component/page';
@@ -21,9 +23,11 @@ import { PageComponent } from './component/page';
   declarations: [
     AppComponent,
     SharedComponent,
+    PageTopComponent,
     LoginComponent,
     NoteComponent,
-    PageComponent
+    PageComponent,
+    PageTopComponent
   ],
   imports: [
     BrowserModule,
